@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="pharmacyDB" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-N30JQ3D\SQLEXPRESS;Initial Catalog=pharmacyDB;Integrated Security=True" SettingsObjectName="EczaneOtomasyon.Properties.Settings" SettingsPropertyName="pharmacyDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.fatura" Member="faturas">
+    <Type Name="fatura">
+      <Column Name="fid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fno" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="satisid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ilacturleri" Member="ilacturleris">
+    <Type Name="ilacturleri">
+      <Column Name="turid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="turadi" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.musteri" Member="musteris">
+    <Type Name="musteri">
+      <Column Name="mid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="madi" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="adres" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="telno" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="musteri_sati" Member="satis" ThisKey="mid" OtherKey="musteriid" Type="sati" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tedarikci" Member="tedarikcis">
+    <Type Name="tedarikci">
+      <Column Name="tedarikciid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tedarikciadi" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="tedadres" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="tedtelno" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ilaclar" Member="ilaclars">
+    <Type Name="ilaclar">
+      <Column Name="ilacid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ilacAdi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ilacTuru" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="BirimFiyat" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Miktar" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TETT" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="FirmaAdi" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="SeriNo" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="deleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="ilaclar_sati" Member="satis" ThisKey="ilacid" OtherKey="ilacid" Type="sati" />
+    </Type>
+  </Table>
+  <Table Name="dbo.satis" Member="satis">
+    <Type Name="sati">
+      <Column Name="sid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ilacid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="musteriid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="satistarihi" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="miktari" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="toplamfiyat" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="musteri_sati" Member="musteri" ThisKey="musteriid" OtherKey="mid" Type="musteri" IsForeignKey="true" />
+      <Association Name="ilaclar_sati" Member="ilaclar" ThisKey="ilacid" OtherKey="ilacid" Type="ilaclar" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

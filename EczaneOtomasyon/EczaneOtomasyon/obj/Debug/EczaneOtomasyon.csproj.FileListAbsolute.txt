@@ -1,0 +1,13 @@
+C:\Users\hp\source\repos\EczaneOtomasyon\EczaneOtomasyon\bin\Debug\EczaneOtomasyon.exe.config
+C:\Users\hp\source\repos\EczaneOtomasyon\EczaneOtomasyon\bin\Debug\EczaneOtomasyon.exe
+C:\Users\hp\source\repos\EczaneOtomasyon\EczaneOtomasyon\bin\Debug\EczaneOtomasyon.pdb
+C:\Users\hp\source\repos\EczaneOtomasyon\EczaneOtomasyon\bin\Debug\Guna.Charts.WinForms.dll
+C:\Users\hp\source\repos\EczaneOtomasyon\EczaneOtomasyon\bin\Debug\Guna.UI2.dll
+C:\Users\hp\source\repos\EczaneOtomasyon\EczaneOtomasyon\bin\Debug\Guna.Charts.WinForms.xml
+C:\Users\hp\source\repos\EczaneOtomasyon\EczaneOtomasyon\obj\Debug\EczaneOtomasyon.Form1.resources
+C:\Users\hp\source\repos\EczaneOtomasyon\EczaneOtomasyon\obj\Debug\EczaneOtomasyon.Properties.Resources.resources
+C:\Users\hp\source\repos\EczaneOtomasyon\EczaneOtomasyon\obj\Debug\EczaneOtomasyon.csproj.GenerateResource.cache
+C:\Users\hp\source\repos\EczaneOtomasyon\EczaneOtomasyon\obj\Debug\EczaneOtomasyon.csproj.CoreCompileInputs.cache
+C:\Users\hp\source\repos\EczaneOtomasyon\EczaneOtomasyon\obj\Debug\EczaneOtomasyon.csproj.CopyComplete
+C:\Users\hp\source\repos\EczaneOtomasyon\EczaneOtomasyon\obj\Debug\EczaneOtomasyon.exe
+C:\Users\hp\source\repos\EczaneOtomasyon\EczaneOtomasyon\obj\Debug\EczaneOtomasyon.pdb
